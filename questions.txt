@@ -1,0 +1,4 @@
+1. General Trend: The Accuracy of the test increases as the percentage of data used for training increases. There are some points in the graph where the accuracy of the test actually decreases as the percentage of data used for training increases, but overall, we would say that these two are positively correlated. 
+2. The curve seems to be noisier in the lower percentage of data used for training. It may be because there are less observations being used for building the model so extreme outliers have a heavier effect on the accuracy of the test. 
+3. 100 trials made it a nice smooth curve. Any trials greater than 100 will make the curve smooth. 
+4. Decreasing C (by increasing the number that is being raised to the power of -10)results in better accuracy in the higher half of the percentage of data used, while increasing C results in better accuracy in the lower half of the percentage of data used. 
