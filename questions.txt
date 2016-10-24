@@ -1,0 +1,15 @@
+1. What is the general trend in the curve?
+The general trend in the curve is that as the percentage of data used for training increases, so does
+the computer's accuracy on the test set. This means the more data you give the computer, the better the computer learns.
+
+2. Are there parts of the curve that appear to be noisier than others?  Why?
+The parts of the curve that appear to be noisier than others occurs mainly between 0%-50% on the graph.
+This may be because at those percentages there is less data for the computer to test with.
+
+3. How many trials do you need to get a smooth curve?
+I tested different trial sizes at 50, 100,and 200 trials. I was able to finally get a fairly smooth
+curve at 300 trials with very little noise.
+
+4. Try different values for C (by changing LogisticRegression(C=10**-10)).  What happens?
+The higher the C value, the higher the computer's accuracy at lower percentages of data. I tested this with C value equal to 1.
+The lower the C value, the noisier the curve becomes with a wilder variation. I tested this portion with C = 10**-20.
