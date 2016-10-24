@@ -1,0 +1,9 @@
+Andrew Holmes - Machine Learning Toolbox
+
+1. Generally, the curve trends upward, approaching 1 as the percentage of data used for training increases. 
+
+2. There is more noise in some parts of the curve than others, but it is generally noisy across the board. This is likely because the number of tests performed is small (only 10) and there tend to be large discrepencies between tests at the same training percentage. Increasing the step size and number of tests taken would make the noise in the curve less apparent.
+
+3. I increased the number of trials per data point to 100 and got a much smoother curve. While it would take much longer for the computer to output, increasing by even more trials would create an even smoother curve. 
+
+4. When I set C = 10**-1, the curve looked much less linear. It rises very quickly and then approaches 1 at a slower rate. Thus, the accuracy is higher for lower training data percentages. When I set C = 10, The accuracy trends much higher much faster. When I set C = 10**10, it looks as though the accuracy increases in steps and there's a lot more noise. 
