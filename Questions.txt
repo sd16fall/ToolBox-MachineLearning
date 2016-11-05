@@ -1,0 +1,4 @@
+1. The general trend in the curve is the higher the percentage of data used for training, the higher the accuracy of the test. 
+2. The lower half of the curve appears to have more noise than the top half of the curve, which may be because there is less data to build a model with and thus, we cannot expect very representative models. 
+3. The greater the number of trials, the more smooth the curve. At 100 trials, I start to get a smoother curve with some repetitive bumps. When increased to 500, I get a fairly smooth curve. 
+4. When the C value is increased, the computer's accuracy at lower percentages of data seems to improve. When the C value is dexreased, the computer's accuracy at higher percentages of data seems to improve.

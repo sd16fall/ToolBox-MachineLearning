@@ -19,6 +19,15 @@ test_accuracies = numpy.zeros(len(train_percentages))
 
 # TODO: your code here
 
+for i in range(len(train_percentages)):
+    result = 0
+    for j in range(num_trials):
+        X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, train_size=train_percentages[i]/100.0)
+        model = LogisticRegression(C=10**-10)
+        model.fit(X_train, y_train)
+        result += model.score(X_test, y_test)
+    test_accuracies[i] = result/num_trials
+
 fig = plt.figure()
 plt.plot(train_percentages, test_accuracies)
 plt.xlabel('Percentage of Data Used for Training')
