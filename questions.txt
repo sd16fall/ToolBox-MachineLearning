@@ -1,0 +1,4 @@
+1. The general trend of the curve is upwards. It seems like as accuracy increases, the percentage of data used for training increases, yet the curve appears to be leveled off at higher percentages.
+2. It seems like the curve appears to be noisier in the range of 55 to 80 percent of data used for training. The reason would be that there are less observation in the model to continuously measure the accuracy of the model.
+3. About 100 trials to get the a smooth curve.
+4. When I tried with C=10**-1 (the larger value than the one that I used), the curve rapidly increases and normalizes at a high percentage. 
