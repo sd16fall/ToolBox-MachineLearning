@@ -18,6 +18,15 @@ test_accuracies = numpy.zeros(len(train_percentages))
 # for consistency with the previous example use model = LogisticRegression(C=10**-10) for your learner
 
 # TODO: your code here
+for (i,train_percent) in enumerate(train_percentages):
+        test_accuracy = numpy.zeros(num_trials)
+        for n in range(num_trials):
+                X_train, X_test, y_train, y_test = train_test_split(data.data, data.target, train_size=train_percent/100.0)
+                model = LogisticRegression(C=10**-10)
+                model.fit(X_train, y_train)
+                test_accuracy[n] = model.score(X_test, y_test)
+        test_accuracies[i] = test_accuracy.mean()
+
 
 fig = plt.figure()
 plt.plot(train_percentages, test_accuracies)
