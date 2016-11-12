@@ -1,7 +1,7 @@
 """ Exploring learning curves for classification of handwritten digits """
 
 import matplotlib.pyplot as plt
-import numpy
+import numpy as npy
 from sklearn.datasets import *
 from sklearn.cross_validation import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -10,7 +10,9 @@ data = load_digits()
 print data.DESCR
 num_trials = 10
 train_percentages = range(5,95,5)
-test_accuracies = numpy.zeros(len(train_percentages))
+test_accuracies = npy.zeros(len(train_percentages))
+
+#test_accuracies = numpy.zeros(len(train_percentages))
 
 # train a model with training percentages between 5 and 90 (see train_percentages) and evaluate
 # the resultant accuracy.
@@ -18,6 +20,15 @@ test_accuracies = numpy.zeros(len(train_percentages))
 # for consistency with the previous example use model = LogisticRegression(C=10**-10) for your learner
 
 # TODO: your code here
+for (i,train_percent) in enumerate(train_percentages):
+    testdataaccuracy=npy.zeros(num_trials)
+
+    for n in range (num_trials):
+        x_train, x_test,y_train,y_test=train_test_split(data.data,data.target,train_size=train_percent/100.0)
+        model=LogisticRegression(C=10**-10)
+        model.fit(x_train,y_train)
+        testdataaccuracy[n] = model.score(x_test,y_test)
+    test_accuracies[i] = testdataaccuracy.mean()
 
 fig = plt.figure()
 plt.plot(train_percentages, test_accuracies)
