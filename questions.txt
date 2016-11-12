@@ -1,0 +1,13 @@
+Question 1:
+As the training percentage increases, the accuracy of the test data set increases.
+
+Question 2:
+Between 30% and 70% for the training data set seems to be the most noisy.
+Its possible the data used to create the model is much different than the data for the test portion, leading to variability in accuracy.
+
+Question 3:
+100 trials seems to really smooth out the curve.
+
+Question 4:
+By changing C to equal 20**-10, the graph became overall more noisy, but the variation wasn't as much as it was before.
+Before, the variability was a lot between 30-70, now the whole graph has some noise, but not to the extent as before.
